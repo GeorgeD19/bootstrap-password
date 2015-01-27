@@ -1,6 +1,6 @@
 {
 	"name": "bootstrap-password",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"main": [
 		"public/js/bootstrap-password.js",
 		"public/css/bootstrap-password.css"

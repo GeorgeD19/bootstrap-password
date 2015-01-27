@@ -120,7 +120,7 @@ class PasswordInput
     return unless @backgroundMeterElement?
 
 #    console.debug "background-meter z-index: #{@baseZindex + 1}"
-    console.debug "background-meter location set to: ", @element.offset()
+#    console.debug "background-meter location set to: ", @element.offset()
     backgroundMeterCss =
       position: 'absolute'
       verticalAlign: @element.css('verticalAlign')
