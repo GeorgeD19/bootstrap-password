@@ -292,7 +292,6 @@ PasswordInput = (function() {
     if (this.backgroundMeterElement == null) {
       return;
     }
-    console.debug("background-meter location set to: ", this.element.offset());
     backgroundMeterCss = {
       position: 'absolute',
       verticalAlign: this.element.css('verticalAlign'),
