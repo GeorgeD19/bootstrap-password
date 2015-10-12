@@ -134,12 +134,12 @@ $.fn.extend({
     }
   },
   bootstrapPassword: function(options) {
-    var defaultOptions, _ref;
+    var defaultOptions, ref;
     if (options == null) {
       options = {};
     }
     defaultOptions = $.extend(true, {}, this._defaultOptions);
-    if (((_ref = options['input-group']) != null ? _ref.layout : void 0) != null) {
+    if (((ref = options['input-group']) != null ? ref.layout : void 0) != null) {
       defaultOptions['input-group'].layout = null;
     }
     if (options['features'] != null) {
@@ -159,24 +159,24 @@ $.fn.extend({
 
 ;require.register("lib/password_input", function(exports, require, module) {
 var PasswordInput,
-  __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
-  __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+  bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+  indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
 PasswordInput = (function() {
-  function PasswordInput(element, options) {
-    this.options = options;
-    this.defaultCalculation = __bind(this.defaultCalculation, this);
-    this.calculateStrength = __bind(this.calculateStrength, this);
-    this.updateUI = __bind(this.updateUI, this);
-    this.onKeyup = __bind(this.onKeyup, this);
-    this.onToggleVisibility = __bind(this.onToggleVisibility, this);
-    this.setBackgroundMeterPosition = __bind(this.setBackgroundMeterPosition, this);
-    this.hideBackgroundMeter = __bind(this.hideBackgroundMeter, this);
-    this.layoutMeter = __bind(this.layoutMeter, this);
-    this.attachToToggleVisibilityIcon = __bind(this.attachToToggleVisibilityIcon, this);
-    this.attachToToggleVisibilityText = __bind(this.attachToToggleVisibilityText, this);
-    this.layoutInputGroup = __bind(this.layoutInputGroup, this);
-    this.layoutToggleVisibilityLink = __bind(this.layoutToggleVisibilityLink, this);
+  function PasswordInput(element, options1) {
+    this.options = options1;
+    this.defaultCalculation = bind(this.defaultCalculation, this);
+    this.calculateStrength = bind(this.calculateStrength, this);
+    this.updateUI = bind(this.updateUI, this);
+    this.onKeyup = bind(this.onKeyup, this);
+    this.onToggleVisibility = bind(this.onToggleVisibility, this);
+    this.setBackgroundMeterPosition = bind(this.setBackgroundMeterPosition, this);
+    this.hideBackgroundMeter = bind(this.hideBackgroundMeter, this);
+    this.layoutMeter = bind(this.layoutMeter, this);
+    this.attachToToggleVisibilityIcon = bind(this.attachToToggleVisibilityIcon, this);
+    this.attachToToggleVisibilityText = bind(this.attachToToggleVisibilityText, this);
+    this.layoutInputGroup = bind(this.layoutInputGroup, this);
+    this.layoutToggleVisibilityLink = bind(this.layoutToggleVisibilityLink, this);
     this.element = $(element);
     this.id = this.element.attr('id');
     this.isShown = false;
@@ -207,7 +207,7 @@ PasswordInput = (function() {
   }
 
   PasswordInput.prototype.layoutToggleVisibilityLink = function() {
-    if (__indexOf.call(this.options.features, 'toggle-visibility-link') < 0) {
+    if (indexOf.call(this.options.features, 'toggle-visibility-link') < 0) {
       return;
     }
     this.toggleVisibilityTextElement = $("<a href='#' class='toggle-visibility'>" + this.i18n.show + "</a>");
@@ -215,8 +215,8 @@ PasswordInput = (function() {
   };
 
   PasswordInput.prototype.layoutInputGroup = function() {
-    var addon, addonElement, addonKey, reachedInput, _i, _len, _ref, _results;
-    if (__indexOf.call(this.options.features, 'input-group') < 0) {
+    var addon, addonElement, addonKey, i, len, reachedInput, ref, results;
+    if (indexOf.call(this.options.features, 'input-group') < 0) {
       return;
     }
     this.inputGroupElement = this.element.parents('.input-group');
@@ -225,10 +225,10 @@ PasswordInput = (function() {
       this.element.wrap(this.inputGroupElement);
     }
     reachedInput = false;
-    _ref = this.options['input-group'].layout;
-    _results = [];
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      addonKey = _ref[_i];
+    ref = this.options['input-group'].layout;
+    results = [];
+    for (i = 0, len = ref.length; i < len; i++) {
+      addonKey = ref[i];
       if (addonKey === 'input') {
         reachedInput = true;
         continue;
@@ -236,35 +236,35 @@ PasswordInput = (function() {
       addon = this.options['input-group'].addons[addonKey];
       addonElement = $("<div class=\"input-group-addon\">\n    " + addon.html + "\n</div>");
       if (reachedInput) {
-        _results.push(this.element.after(addonElement));
+        results.push(this.element.after(addonElement));
       } else {
-        _results.push(this.element.before(addonElement));
+        results.push(this.element.before(addonElement));
       }
     }
-    return _results;
+    return results;
   };
 
   PasswordInput.prototype.attachToToggleVisibilityText = function() {
-    var _ref;
+    var ref;
     this.toggleVisibilityTextElement = this.formGroupElement.find('a.toggle-visibility');
     if (this.toggleVisibilityTextElement.length <= 0) {
       this.toggleVisibilityTextElement = null;
     }
-    return (_ref = this.toggleVisibilityTextElement) != null ? _ref.click(this.onToggleVisibility) : void 0;
+    return (ref = this.toggleVisibilityTextElement) != null ? ref.click(this.onToggleVisibility) : void 0;
   };
 
   PasswordInput.prototype.attachToToggleVisibilityIcon = function() {
-    var _ref;
+    var ref;
     this.toggleVisibilityIconElement = this.formGroupElement.find('.input-group').find('span.toggle-visibility');
     if (this.toggleVisibilityIconElement.length <= 0) {
       this.toggleVisibilityIconElement = null;
     }
-    return (_ref = this.toggleVisibilityIconElement) != null ? _ref.click(this.onToggleVisibility) : void 0;
+    return (ref = this.toggleVisibilityIconElement) != null ? ref.click(this.onToggleVisibility) : void 0;
   };
 
   PasswordInput.prototype.layoutMeter = function() {
     var meterGroupElement;
-    if (__indexOf.call(this.options.features, 'background-meter') >= 0) {
+    if (indexOf.call(this.options.features, 'background-meter') >= 0) {
       this.formGroupElement.addClass('background-metered');
       this.backgroundMeterElement = $("<div class='background-meter' />");
       this.formGroupElement.append(this.backgroundMeterElement);
@@ -292,7 +292,6 @@ PasswordInput = (function() {
     if (this.backgroundMeterElement == null) {
       return;
     }
-    console.debug("background-meter location set to: ", this.element.offset());
     backgroundMeterCss = {
       position: 'absolute',
       verticalAlign: this.element.css('verticalAlign'),
@@ -335,10 +334,10 @@ PasswordInput = (function() {
   };
 
   PasswordInput.prototype.updateUI = function(strength) {
-    var cssClass, _i, _len, _ref;
-    _ref = ['strong', 'medium', 'weak', 'veryWeak', 'none'];
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      cssClass = _ref[_i];
+    var cssClass, i, len, ref;
+    ref = ['strong', 'medium', 'weak', 'veryWeak', 'none'];
+    for (i = 0, len = ref.length; i < len; i++) {
+      cssClass = ref[i];
       this.formGroupElement.removeClass(cssClass);
     }
     this.formGroupElement.addClass(strength);
