@@ -28,20 +28,22 @@
 <body>
 
 <div class="container">
+    <h1>Elegant?</h1>
     <form>
         <div class="row">
             <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-                <h1>Elegant?</h1>
+                <div class="form-group">
+                    <p><a id="dynamic-hint-btn" class="btn btn-default" role="button">Test relative positioning</a></p>
+                    <!--<span id="dynamic-hint" class="help-block" style="visibility: hidden">Some dynamic hint</span>-->
+                    <span id="dynamic-hint" class="help-block" style="display: none">Some dynamic hint</span>
+                </div>
+
                 <div class="form-group">
                     <label for="elegant-1">Password</label>
                     <input type="password" class="form-control" id="elegant-1" placeholder="Password" value="ee3##eeeeu">
                     <span class="help-block">Some helpful text on a good password</span>
                 </div>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
                 <h2>Other Examples</h2>
 
                 <div class="form-group">
@@ -68,6 +70,10 @@
                     features: ['background-meter', 'toggle-visibility-link']
                 }
         );
+        $('#dynamic-hint-btn').click(function(){
+            console.log('displaying hint');
+            $('#dynamic-hint').toggle()
+        });
     });
 </script>
 </body>
