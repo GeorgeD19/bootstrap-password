@@ -1,6 +1,6 @@
 bootstrap-password
 ===========
-Bootstrap based password field with declarative options and extensive customizability.
+Bootstrap based password field with declarative options and extensive customizability, including password strength indicators.
 
 [Multiple demos available showing customization options.](http://alienfast.github.io/bootstrap-password/)
 
@@ -10,12 +10,14 @@ Customize via:
 * SCSS variables
 * Coffescript subclassing
 
-Available as a bower package.
-
 # Screenshot
 ![Screenshot](screenshots/index.png)
 
 # Usage
+
+## Bower
+Available as bower package `bootstrap-password`
+
 
 ## Distribution files
 All distributions are in the `public` directory.  Necessary files are:
