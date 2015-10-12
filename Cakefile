@@ -43,11 +43,11 @@ task 'test', ->
 #    else if error
 #      console.log error
 
-task 'build:pre', ->
-  invoke 'build:assets-hack'
+#task 'build:pre', ->
+#  invoke 'build:assets-hack'
 
 task 'build:test', ->
-  invoke 'build:pre'
+#  invoke 'build:pre'
   exec 'brunch b', (error, stdout, stderr) ->
     if stdout
       console.log stdout
@@ -94,10 +94,9 @@ copyAll = (config, skipRm = false) ->
       log "Copied #{file} to: #{dest}", green
   )
 
-task 'build:assets-hack', ->
-#  invoke 'build:assets-scss'
-  # (hack) see https://github.com/brunch/brunch/issues/633
-  invoke 'build:assets-bootstrap-fonts'
+#task 'build:assets-hack', ->
+#  # (hack) see https://github.com/brunch/brunch/issues/633
+#  invoke 'build:assets-bootstrap-fonts'
 
 #task 'build:assets-scss', 'copy the scss files to make them optionally available', ->
 #  log "Running build:assets-scss", green
@@ -108,14 +107,14 @@ task 'build:assets-hack', ->
 #
 #  copyAll(config)
 
-task 'build:assets-bootstrap-fonts', 'copy the bootstrap fonts in the expected public location (hack) see https://github.com/brunch/brunch/issues/633', ->
-  log "Running build:assets-bootstrap-fonts...", green
-
-  config =
-    src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
-    dest: 'public/fonts/bootstrap'
-
-  copyAll(config)
+#task 'build:assets-bootstrap-fonts', 'copy the bootstrap fonts in the expected public location (hack) see https://github.com/brunch/brunch/issues/633', ->
+#  log "Running build:assets-bootstrap-fonts...", green
+#
+#  config =
+#    src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
+#    dest: 'public/fonts/bootstrap'
+#
+#  copyAll(config)
 
 
 task 'ghpages', ->

@@ -8,12 +8,21 @@
     "type": "git",
     "url": "https://github.com/alienfast/bootstrap-password.git"
   },
+  "engines": {
+    "node": "latest"
+  },
   "scripts": {
     "test": "cake build:test",
     "start": "brunch watch --server"
   },
   "dependencies": {
-    "jquery": ">=1.10.2"
+    "jquery": "latest",
+    "clean-css-brunch": "latest",
+    "css-brunch": "latest",
+    "javascript-brunch": "latest",
+    "sass-brunch": "latest",
+    "uglify-js-brunch": "latest",
+    "read-components": "latest"
   },
   "devDependencies": {
     "rimraf": "*",
@@ -21,20 +30,16 @@
     "glob": "*",
     "path": "*",
     "ncp": "*",
-    "clean-css-brunch": ">= 1.0",
-    "coffee-script": ">=1.7.1",
-    "coffee-script-brunch": ">= 1.0",
-    "coffeelint-brunch": ">= 1.0",
-    "css-brunch": ">= 1.0",
-    "sass-brunch": ">= 0.1",
-    "javascript-brunch": ">= 1.0",
-    "karma": ">=0.12.1",
-    "karma-jasmine": ">=0.2.2",
-    "karma-chrome-launcher": "^0.1.3",
-    "karma-coffee-preprocessor": "^0.2.1",
-    "karma-firefox-launcher": "^0.1.3",
-    "karma-phantomjs-launcher": "^0.1.3",
-    "karma-requirejs": "^0.2.1",
-    "karma-safari-launcher": "^0.1.1"
+    "coffee-script": "latest",
+    "coffee-script-brunch": "latest",
+    "coffeelint-brunch": "latest",
+    "karma": "latest",
+    "karma-jasmine": "latest",
+    "karma-chrome-launcher": "latest",
+    "karma-coffee-preprocessor": "latest",
+    "karma-firefox-launcher": "latest",
+    "karma-phantomjs-launcher": "latest",
+    "karma-requirejs": "latest",
+    "karma-safari-launcher": "latest"
   }
 }

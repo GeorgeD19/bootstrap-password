@@ -50,7 +50,7 @@ This project is authored in coffescript and scss.
 ### Brunch
 [Brunch](http://brunch.io) is a html5 application builder that's agnostic to programming langs and frameworks.
 
-`brunch-config.coffee` contains brunch configuration, `package.json` contains brunch plugins.
+`config.coffee` contains brunch configuration, `package.json` contains brunch plugins.
 
 ### Bootstrap
 The project imports bootstrap variables and utilizes them throughout.  Additionally, like bootstrap, it declares variables that can be overridden
@@ -65,10 +65,8 @@ It is accessible via the bower package manager.
 * Install bower plugins: `bower install`
 * Install brunch via nodejs: `npm install -g brunch`
 * Install brunch plugins: `npm install`
-* Run pre build: `cake build:pre`
 * Run dev server: `clear; DEBUG='brunch:*,-brunch:source-file,-brunch:watch' brunch watch --server`
-* Open `127.0.0.1:3333`
-* Check out some demos
+* Open `127.0.0.1:3333` to check out the demos
 
 ### Tests
 * Run tests via RubyMine by running the `karma.conf.js` file; or
