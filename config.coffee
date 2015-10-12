@@ -28,7 +28,6 @@ module.exports = config:
 
     stylesheets:
       joinTo:
-
         'css/vendor.css': /^(bower_components|vendor)/
         'css/bootstrap-password.css': /^app/
       order:
@@ -55,10 +54,7 @@ module.exports = config:
 
     # 1. omit anything starting with an underscore (except root of _bootstrap.scss) default: /[\\/]_/
     # 2. default: omit stuff
-    # 3. need to omit bootstrap's assets/javascripts
     ignored: [
       /[\\/]_(?!bootstrap.scss)/
-
       /vendor[\\/](node|j?ruby-.*|bundle)[\\/]/
-      /bower_components\/bootstrap-sass-official\/assets\/javascripts/
     ]
