@@ -1,0 +1,18 @@
+$bg-darken: 10% !default;
+$icon-darken: 50% !default;
+
+$veryWeak-background-color: #FFDDDD !default;
+$veryWeak-border-color: darken($veryWeak-background-color, $bg-darken) !default;
+$veryWeak-icon-color: darken($veryWeak-background-color, $icon-darken) !default;
+
+$weak-background-color: #FDDFD0 !default;
+$weak-border-color: darken($weak-background-color, $bg-darken) !default;
+$weak-icon-color: darken($weak-background-color, $icon-darken) !default;
+
+$medium-background-color: #FFF6C5 !default;
+$medium-border-color: darken($medium-background-color, $bg-darken) !default;
+$medium-icon-color: darken($medium-background-color, $icon-darken) !default;
+
+$strong-background-color: #DFFEC2 !default;
+$strong-border-color: darken($strong-background-color, $bg-darken) !default;
+$strong-icon-color: darken($strong-background-color, $icon-darken) !default;

@@ -25,6 +25,7 @@
     "read-components": "latest"
   },
   "devDependencies": {
+    "cpr": "latest",
     "rimraf": "*",
     "mkdirp": "*",
     "glob": "*",
