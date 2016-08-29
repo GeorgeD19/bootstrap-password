@@ -1,5 +1,7 @@
 bootstrap-password
 ===========
+**If you are interested in taking over this code, please send us a message, anyone is welcome!**
+
 Bootstrap based password field with declarative options and extensive customizability, including password strength indicators.
 
 [Multiple demos available showing customization options.](http://alienfast.github.io/bootstrap-password/)
